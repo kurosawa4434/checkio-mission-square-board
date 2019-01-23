@@ -1,0 +1,70 @@
+
+<p>
+You are designing a board game.
+The tokens move around the square board with this game.(like <a href='https://en.wikipedia.org/wiki/Monopoly_(game)'>Monopoly(Wikipedia)</a>)
+</p>
+
+<p>
+You need to the function that return the coordinate after the token have moved. The coordinate is a list of row and column. The top-left is [0, 0].
+</p>
+<p>
+You are given three arguments: the first one is the length of one side of game board (an integer), the second is current position of token (an integer. The cells around the board is numbered clockwise. That starting with 0 on bottom-right.).
+the third is the number of steps to advance (an integer. positive number is clockwise. negative number is anticlockwise.).
+</p>
+
+
+<div class="for_info_only">
+    <p><strong>Example:</strong></p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+square_board(4, 1, 4) == [1, 0]
+square_board(6, 2, -3) == [4, 5]
+</pre>
+{% else %}
+<pre class="brush: python">
+square_board(4, 1, 4) == [1, 0]
+square_board(6, 2, -3) == [4, 5]
+</pre>
+{% endif %}
+</pre>
+
+<table>
+    <!--
+    <thead><tr>
+            <th>square_board(4, 1, 4) == (1, 0)</th>
+            <th>square_board(6, 2, -3) == (4, 5)</th>
+        </tr></thead>
+    -->
+    <tbody><tr>
+            <td style='padding: 15px;'><img  title="example01" src="{{MEDIA}}tests_example_01.png" alt="example" style="max-height: 269px"/></td>
+            <td><img  title="example02" src="{{MEDIA}}tests_example_02.png" alt="example" style="max-height: 269px"/></td>
+        </tr></tbody>
+</table>
+</div>
+
+<p><strong>Input: </strong>
+{% if interpreter.slug == "js-node" %}
+{% else %}
+The first one is the length of one side of square board (an integer), the second is current position of token (an integer). the third is the number of steps to advance (an integer).
+{% endif %}
+
+</p>
+
+<p><strong>Output: </strong>The coordinate after the token have moved. (a list of row and column).
+</p>
+
+
+<p>
+<strong>How it is used:</strong><br>
+get the coordinate of the object that go around.
+</p>
+
+<p>
+<strong>Precondition:</strong><br>
+<ul>
+    <li>3 &le; The length of the side &le; 11</li>
+    <li>0 &le; The position of the token &lt; (side-1)*4</li>
+</ul>
+</p>
+
+
