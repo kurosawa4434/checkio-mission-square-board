@@ -7,7 +7,7 @@ def square_board(side: int, token: int, steps: int) -> Coordinate:
 
 if __name__ == '__main__':
     print("Example:")
-    print(square_board([4, 1, 4]))
+    print(square_board(4, 1, 4))
     square_board(4, 1, 4) == [1, 0]
     square_board(6, 2, -3) == [4, 5]
 
