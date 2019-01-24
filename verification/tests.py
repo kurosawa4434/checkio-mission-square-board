@@ -6,7 +6,7 @@ Each test is dict with
     "answer" -- your right answer
     "explanation" -- not necessary key, it's using for additional info in animation.
 """
-from random import randint
+from random import randint, choice
 
 
 def solution(edge, you, die):
@@ -27,7 +27,7 @@ for _ in range(10):
     e = randint(3, 11)
     c = (e-1)*4
     y = randint(0, c-1)
-    s = randint(0, c) * [1, 1, -1][randint(0, 2)]*[1, 1, 1, 1, 1, 1, 1, 1, 2, 3][randint(0, 9)]
+    s = randint(0, c) * choice([1, 1, -1])*choice([1, 1, 1, 1, 1, 1, 1, 1, 2, 3])
     randoms.append({'input': [e, y, s], 'answer': solution(e, y, s)})
 
 TESTS = {

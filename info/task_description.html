@@ -5,7 +5,7 @@ The tokens move around the square board with this game.(like <a href='https://en
 </p>
 
 <p>
-You need to the function that return the coordinate after the token have moved. The coordinate is a list of row and column. The top-left is [0, 0].
+You need to the function that return the coordinate after the token have moved. The coordinate is a tuple of row and column. The top-left is (0, 0).
 </p>
 <p>
 You are given three arguments: the first one is the length of one side of game board (an integer), the second is current position of token (an integer. The cells around the board is numbered clockwise. That starting with 0 on bottom-right.).
@@ -22,8 +22,8 @@ square_board(6, 2, -3) == [4, 5]
 </pre>
 {% else %}
 <pre class="brush: python">
-square_board(4, 1, 4) == [1, 0]
-square_board(6, 2, -3) == [4, 5]
+square_board(4, 1, 4) == (1, 0)
+square_board(6, 2, -3) == (4, 5)
 </pre>
 {% endif %}
 </pre>
@@ -50,7 +50,7 @@ The first one is the length of one side of square board (an integer), the second
 
 </p>
 
-<p><strong>Output: </strong>The coordinate after the token have moved. (a list of row and column).
+<p><strong>Output: </strong>The coordinate after the token have moved. (a tuple of row and column).
 </p>
 
 
