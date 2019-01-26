@@ -1,5 +1,5 @@
 from typing import Tuple
-Coordinate = Tuple[int]
+Coordinate = Tuple[int, int]
 
 
 def square_board(side: int, token: int, steps: int) -> Coordinate:
