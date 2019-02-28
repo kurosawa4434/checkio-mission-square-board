@@ -1,0 +1,72 @@
+<p>
+Ты разрабатываешь игру, в которой фишки двигаются по периметру квадратной карты
+(как в <a href='https://ru.wikipedia.org/wiki/Монополия_(игра)'>Монополии</a>)
+</p>
+
+<p>
+Требуется написать функцию, которая возвращает значения координат фишки после того, как ей "сходили". Координаты фишки - кортеж, содержащий номера строки и столбца. Координаты нижнего левого угла - (0, 0).
+</p>
+
+<ul style="line-height: 1.5em;">
+Функция принимает 3 целочисленных аргумента: 
+<li>первый - длина стороны игровой карты;</li>
+<li>второй - номер клетки исходной позиции фишки;</li>
+<p>Нумерация клеток по периметру карты начинается с 0 в правом нижнем углу и осуществляется по часовой стрелке.</p>
+<li>третий - количество "шагов" фишки;</li>
+<p>A Положительное количество "шагов" говорит о том, что фишкой нужно идти по часовой стрелке, отрицательное - против часовой.</p>
+</ul>
+
+
+<div class="for_info_only">
+    <p><strong>Example:</strong></p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+square_board(4, 1, 4) == [1, 0]
+square_board(6, 2, -3) == [4, 5]
+</pre>
+{% else %}
+<pre class="brush: python">
+square_board(4, 1, 4) == (1, 0)
+square_board(6, 2, -3) == (4, 5)
+</pre>
+{% endif %}
+</pre>
+
+<table>
+    <!--
+    <thead><tr>
+            <th>square_board(4, 1, 4) == (1, 0)</th>
+            <th>square_board(6, 2, -3) == (4, 5)</th>
+        </tr></thead>
+    -->
+    <tbody><tr>
+            <td style='padding: 15px;'><img  title="example01" src="{{MEDIA}}tests_example_01.png" alt="example" style="max-height: 269px"/></td>
+            <td><img  title="example02" src="{{MEDIA}}tests_example_02.png" alt="example" style="max-height: 269px"/></td>
+        </tr></tbody>
+</table>
+</div>
+
+<p><strong>Входные данные: </strong>
+{% if interpreter.slug == "js-node" %}
+{% else %}
+3 целочисленных аргумента: длина стороны игровой карты, текущая позиция фишки, число "шагов".
+{% endif %}
+
+</p>
+
+<p><strong>Выходные данные: </strong>Координаты фишки после хода (кортеж, содержащий номер строки и номер столбца).
+</p>
+
+
+<p>
+<strong>Как это используется:</strong><br>
+Используется для вычисления координат объекта, движущегося по периметру.
+</p>
+
+<p>
+<strong>Предусловия:</strong><br>
+<ul>
+    <li>3 &le; The length of the side &le; 11</li>
+    <li>0 &le; The position of the token &lt; (side-1)*4</li>
+</ul>
+</p>
